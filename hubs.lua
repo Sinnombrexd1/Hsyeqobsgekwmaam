@@ -28,7 +28,7 @@ end)
 CombateSection:NewLabel("I recommend the one below")
 
 CombateSection:NewButton("Murder Mystery 2 (does not have a menu)", "Has everything you need", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sinnombrexd1/Lolol/main/script.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sinnombrexd1/Lolol/refs/heads/main/%F0%9F%92%A6%F0%9F%97%A3%EF%B8%8F"))()
 end)
 HitboxSection:NewButton("Duelo Sheriff Vs Murderer", "ButtonInfo", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/KSEEgARB"))()
