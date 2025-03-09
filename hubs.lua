@@ -16,8 +16,8 @@ end
 local mainFrame = Instance.new("Frame")
 mainFrame.Size = UDim2.new(0, 600, 0, 330)
 mainFrame.Position = UDim2.new(0.5, -300, 0.5, -165)
-mainFrame.BackgroundTransparency = 0.2
-mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+mainFrame.BackgroundTransparency = 0
+mainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 mainFrame.Parent = screenGui
 mainFrame.Active = true
 addCorner(mainFrame, 5)
@@ -25,7 +25,7 @@ mainFrame.Draggable = true
 
 local header = Instance.new("Frame")
 header.Size = UDim2.new(1, 0, 0, 40)
-header.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+header.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 header.Parent = mainFrame
 addCorner(header, 5)
 
@@ -55,7 +55,7 @@ closeButton.Size = UDim2.new(0, 30, 1, 0)
 closeButton.Position = UDim2.new(1, -35, 0, 0)
 closeButton.Text = "X"
 closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-closeButton.BackgroundTransparency = 0.8
+closeButton.BackgroundTransparency = 1
 closeButton.TextSize = 16
 closeButton.Parent = header
 addCorner(closeButton, 5)
@@ -76,6 +76,7 @@ local tabLayout = Instance.new("UIListLayout")
 tabLayout.FillDirection = Enum.FillDirection.Horizontal
 tabLayout.Padding = UDim.new(0, 5)
 tabLayout.Parent = tabScroll
+tabLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
 local tabFrames = {}
 
@@ -83,16 +84,16 @@ local function createTab(tabName)
 	local tabButton = Instance.new("TextButton")
 	tabButton.Size = UDim2.new(0, 130, 1, 0)
 	tabButton.Text = tabName
-	tabButton.BackgroundTransparency = 0.3
+	tabButton.BackgroundTransparency = 0.5
 	tabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-	tabButton.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+	tabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	tabButton.Parent = tabScroll
 	addCorner(tabButton, 5)
 
 	local tabFrame = Instance.new("Frame")
 	tabFrame.Size = UDim2.new(1, 0, 1, -80)
 	tabFrame.Position = UDim2.new(0, 0, 0, 80)
-	tabFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+	tabFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	tabFrame.Visible = true
 	tabFrame.BackgroundTransparency = 1
 	tabFrame.Parent = mainFrame
@@ -102,13 +103,14 @@ local function createTab(tabName)
 	frameScroll.Size = UDim2.new(1, -10, 1, -10)
 	frameScroll.Position = UDim2.new(0, 5, 0, 5)
 	frameScroll.CanvasSize = UDim2.new(0, 0, 2, 0)
-	frameScroll.ScrollBarThickness = 4
-	frameScroll.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+	frameScroll.ScrollBarThickness = 1
+	frameScroll.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	frameScroll.Parent = tabFrame
 
 	local buttonLayout = Instance.new("UIListLayout")
 	buttonLayout.Padding = UDim.new(0, 5)
 	buttonLayout.Parent = frameScroll
+	buttonLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
 	tabFrames[tabName] = tabFrame
 
@@ -129,9 +131,9 @@ local function addButtonToTab(tabName, buttonText, callback)
 	button.Size = UDim2.new(1, -10, 0, 40)
 	button.Text = buttonText
 	button.TextSize = 10
-	button.BackgroundTransparency = 0.4
+	button.BackgroundTransparency = 0
 	button.TextColor3 = Color3.fromRGB(255, 255, 255)
-	button.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+	button.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 	button.Parent = parentFrame:FindFirstChildOfClass("ScrollingFrame")
 	addCorner(button, 5)
 	button.MouseButton1Click:Connect(callback)
