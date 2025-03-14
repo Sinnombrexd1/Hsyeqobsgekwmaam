@@ -165,13 +165,7 @@ createTab("Be a Npc Or die")
 createTab("MM2 Aim Trainer")
 
 addButtonToTab("Murder Mystery 2", "Murder Mystery 2", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Jorgelinea/Ahj/refs/heads/main/Protected_5227260397926876.txt"))()
-end)
-
-createLabel("Murder Mystery 2", "I recommend the one above")
-
-addButtonToTab("Murder Mystery 2", "Murder Mystery 2 (does not have a menu)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sinnombrexd1/Lolol/refs/heads/main/%F0%9F%92%A6%F0%9F%97%A3%EF%B8%8F"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sinnombrexd1/symmetrical-octo-goggles12383737373733737733373737363363636363636262627019282827272737337373737738/refs/heads/main/Fuck"))()
 end)
 
 addButtonToTab("Murderers VS Sheriffs duel", "Murderers VS Sheriffs duel", function()
